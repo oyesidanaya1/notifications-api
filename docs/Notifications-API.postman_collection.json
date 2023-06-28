@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "7e78a7a8-5b11-493c-82b1-a2c7db5d79ca",
+		"name": "Notifications-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2704868"
+	},
+	"item": [
+		{
+			"name": "Notifications-API-POST",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ewehbgij6cff461j",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "qnmuhswmp8huf341",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/vnd.worldpay.verified-tokens-v3.hal+json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/vnd.worldpay.verified-tokens-v3.hal+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"category\": \"sports\",\n  \"message\": \"Lionel Messi is the new player for Inter of Miami!!!\"\n}"
+				},
+				"url": {
+					"raw": "{{server_url}}/notifications/publish",
+					"host": [
+						"{{server_url}}"
+					],
+					"path": [
+						"notifications",
+						"publish"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "server_url",
+			"value": "http://localhost:9090",
+			"type": "string"
+		}
+	]
+}
